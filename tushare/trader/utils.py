@@ -34,7 +34,7 @@ def get_vcode(broker, res):
         img = Image.open(io.BytesIO(imgdata))
         img.show()
         img = img.crop(box=(0,0,50,20))
-        img.show()
+        #img.show()
         vcode = pt.image_to_string(img, config='-psm 7 zxjt')
         print(vcode)
         try:

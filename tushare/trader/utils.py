@@ -32,6 +32,15 @@ def get_vcode(broker, res):
     if broker == 'csc':
         imgdata = res.content
         img = Image.open(io.BytesIO(imgdata))
-        vcode = pt.image_to_string(img)
+        img.show()
+        img = img.crop(box=(0,0,50,20))
+        img.show()
+        vcode = pt.image_to_string(img, config='-psm 7 zxjt')
+        print(vcode)
+        try:
+            vcode = eval(vcode)
+        except SyntaxError:
+            return 0
+        print(vcode)
         return vcode
     

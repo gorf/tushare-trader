@@ -21,7 +21,8 @@ PAGES = {
          'entrustlist': 'securityOrdersCancelListInit.json',
          'cancel': 'securityOrdersCancelSubmit.json',
          'deallist': 'securityBuysFindListInit.json',
-         'vimg': 'image.jsp'
+         'vimg': 'image.jsp',
+         'new_vimg': 'imageNewClone.jsp'
          }
 AGENT = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'}
 POSITION_COLS = ['stkcode', 'stkname', 'stkqty', 'stkavl', 'lastprice', 'costprice', 'income']

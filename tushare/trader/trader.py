@@ -46,7 +46,7 @@ class TraderAPI(object):
                                              vs.PAGES['csclogin']))
         res = self.s.get(vs.V_CODE_URL%(vs.P_TYPE['https'],
                                           vs.DOMAINS['csc'],
-                                          vs.PAGES['vimg']))
+                                          vs.PAGES['new_vimg']))
         if self._login(utils.get_vcode('csc', res)) is False:
             print('请确认账号或密码是否正确 ，或券商服务器是否处于维护中。 ')
         self.keepalive()

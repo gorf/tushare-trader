@@ -12,7 +12,9 @@ import json
 import time
 import six
 from tushare.trader import vars as vs
-
+import os
+DIR = os.path.dirname(os.path.abspath(__file__))
+DEBUG = os.path.isfile(os.path.join(DIR,'.debug'))
 def nowtime_str():
     return time.time() * 1000
 
@@ -32,15 +34,18 @@ def get_vcode(broker, res):
     if broker == 'csc':
         imgdata = res.content
         img = Image.open(io.BytesIO(imgdata))
-        #img.show()
         img = img.crop(box=(0,0,50,20))
-        #img.show()
+        if DEBUG:
+            img.show()
         vcode = pt.image_to_string(img, config='-psm 7 zxjt')
         print(vcode)
         try:
             vcode = eval(vcode)
         except SyntaxError:
-            return 0
+            code_strings = vcode.split()
+            #print(code_strings)
+            codes = [int(i) for i in code_strings]
+            vcode = sum(codes)
         print(vcode)
         return vcode
     

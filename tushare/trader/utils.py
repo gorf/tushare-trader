@@ -37,7 +37,7 @@ def get_vcode(broker, res):
         img = img.crop(box=(0,0,50,20))
         if DEBUG:
             img.show()
-        vcode = pt.image_to_string(img, config='-psm 7 zxjt')
+        vcode = pt.image_to_string(img, config='-psm 7 -c tessedit_char_whitelist=0123456789-+')
         print(vcode)
         try:
             vcode = eval(vcode)

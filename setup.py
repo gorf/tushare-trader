@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 import codecs
 import os
-import tushare
+import tushare_trader
 
 def read(fname):
     return codecs.open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 long_desc = """
-TuShare
+tushare_trader
 ===============
 
 .. image:: https://api.travis-ci.org/waditu/tushare.png?branch=master
@@ -30,19 +30,19 @@ Target Users
 Installation
 --------------
 
-    pip install tushare
+    pip install tushare_trader
     
 Upgrade
 ---------------
 
-    pip install tushare --upgrade
+    pip install tushare_trader --upgrade
     
 Quick Start
 --------------
 
 ::
 
-    import tushare as ts
+    import tushare_trader as ts
     
     ts.get_hist_data('600848')
     
@@ -64,8 +64,8 @@ return::
 
 
 setup(
-    name='tushare',
-    version=tushare.__version__,
+    name='tushare_trader',
+    version=tushare_trader.__version__,
     description='A utility for crawling historical and Real-time Quotes data of China stocks',
 #     long_description=read("READM.rst"),
     long_description = long_desc,
@@ -81,7 +81,7 @@ setup(
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
     'License :: OSI Approved :: BSD License'],
-    packages=['tushare','tushare.stock', 'tushare.data', 'tushare.util', 'tushare.datayes',
-              'tushare.internet', 'tushare.fund', 'tushare.trader', 'tushare.futures'],
+    packages=['tushare_trader','tushare_trader.stock', 'tushare_trader.data', 'tushare_trader.util', 'tushare_trader.datayes',
+              'tushare_trader.internet', 'tushare_trader.fund', 'tushare_trader.trader', 'tushare_trader.futures'],
     package_data={'': ['*.csv']},
 )

@@ -11,7 +11,7 @@ Created on 2016年10月1日
 import json
 import time
 import six
-from tushare.trader import vars as vs
+from tushare_trader.trader import vars as vs
 import os
 DIR = os.path.dirname(os.path.abspath(__file__))
 DEBUG = os.path.isfile(os.path.join(DIR,'.debug'))

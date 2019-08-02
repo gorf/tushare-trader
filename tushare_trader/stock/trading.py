@@ -16,7 +16,8 @@ import pandas as pd
 import numpy as np
 from tushare.stock import cons as ct
 import re
-from pandas.compat import StringIO
+from io import StringIO
+#from io import StringIO
 from tushare.util import dateu as du
 from tushare.stock.reference import new_stocks
 try:

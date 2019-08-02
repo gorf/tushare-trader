@@ -12,7 +12,8 @@ import lxml.html
 from lxml import etree
 import re
 import time
-from pandas.compat import StringIO
+#from io import StringIO
+from io import StringIO
 from tushare.util import dateu as du
 try:
     from urllib.request import urlopen, Request

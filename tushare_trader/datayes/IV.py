@@ -7,7 +7,7 @@ Created on 2015/10/12
 @contact: jimmysoa@sina.cn
 """
 
-from pandas.compat import StringIO
+from io import StringIO
 import pandas as pd
 from tushare.util import vars as vs
 from tushare.util.common import Client

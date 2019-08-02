@@ -1,6 +1,7 @@
 .debug
 # Byte-compiled / optimized / DLL files
 *.log
+*~
 *.swp
 *.pdb
 .project

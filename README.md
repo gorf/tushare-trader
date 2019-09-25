@@ -9,9 +9,7 @@ TuShare是实现对股票/期货等金融数据从**数据采集**、**清洗加
 
 ![](http://tushare.org/_images/8.jpg)
 
-
-提示：目前正在规划和开发tushare全新版本，数据内容、数据质量和稳定性将得到明显提高，敬请期待。老版本代码暂不作更新，不过有兴趣的朋友还是可以愉快的玩耍。
-
+tushare-trader本来是tushare里包含的功能，但作者后来不再维护了。我因为要用，就自己开始维护。分离出来tushare-trader项目。
 
 Dependencies
 =========
